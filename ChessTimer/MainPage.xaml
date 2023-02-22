@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessTimer.MainPage">
+    <VerticalStackLayout
+        Spacing="25"
+        VerticalOptions="Center"
+        BackgroundColor="Black">
+        <Entry
+            x:Name="time"
+            Placeholder="Insert game clock value"
+            Keyboard="Numeric"
+            TextChanged="OnEntryTextChanged"
+            Completed="OnEntryCompleted">
+        </Entry>
+        
+        <StackLayout
+            x:Name="blackLayout"
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
+            BackgroundColor="#769656"
+            Spacing="12">
+
+            <Button
+                x:Name="TimerBlackBtn"
+                Text="00:00"
+                Clicked="OnStartStop"
+                FontSize="Header"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent"/>
+
+        </StackLayout>
+        <StackLayout
+            x:Name="buttonsLayout"
+            Orientation="Vertical"
+            HorizontalOptions="Center"
+            Spacing="12">
+
+            <ImageButton
+            x:Name="startStopBtn"
+            Source="play.png"
+            Clicked="StartGame"
+            BackgroundColor="Transparent"
+            Aspect="Fill"
+            HeightRequest="20"
+            WidthRequest="20" />
+
+            <ImageButton
+            x:Name="resetBtn"
+            Source="reset.png"
+            Clicked="ResetGame"
+            BackgroundColor="Transparent"
+            Aspect="Fill"
+            HeightRequest="20"
+            WidthRequest="20" />
+        </StackLayout>
+        <StackLayout
+            x:Name="whiteLayout"
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
+            BackgroundColor="#4C6633"
+            Spacing="12">
+
+            <Button
+                x:Name="TimerWhiteBtn"
+                Text="00:00"
+                Clicked="OnStartStop"
+                FontSize="Header"
+                TextColor="White"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent">
+            </Button>
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
